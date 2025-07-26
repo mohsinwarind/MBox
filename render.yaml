@@ -3,7 +3,7 @@ services:
     name: mbox-web
     env: python
     buildCommand: "./build_files.sh"
-    startCommand: "gunicorn commerce.wsgi:application --bind 0.0.0.0:$PORT"
+    startCommand: "gunicorn project3.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
       - key: DJANGO_SECRET_KEY
         generateValue: true
