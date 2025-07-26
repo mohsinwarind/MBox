@@ -1,0 +1,48 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+<h2>Welcome <i>{{ request.user }}</i> to <span class="title">MBox </span></h2>
+
+<div class="mail-nav mb-3">
+    <button class="btn btn-sm btn-outline-dark" id="inbox">Inbox</button>
+    <button class="btn btn-sm btn-outline-dark" id="compose">Compose</button>
+    <button class="btn btn-sm btn-outline-dark" id="sent">Sent</button>
+    <button class="btn btn-sm btn-outline-dark" id="archived">Archived</button>
+    <a class="btn btn-sm btn-outline-dark" href="{% url 'logout' %}">Log Out</a>
+</div>
+
+
+    <div id="emails-view" class="bg-white shadow-sm rounded p-3">
+    </div>
+
+    <div id="compose-view" class="bg-light shadow-sm rounded p-4" style="display: none;">
+      <h5 class="mb-3">📨 New Email</h5>
+      <form id="compose-form">
+        <div class="mb-3">
+          <label class="form-label">From:</label>
+          <input disabled class="form-control-plaintext" value="{{ request.user.email }}">
+        </div>
+        <div class="mb-3">
+          <label for="compose-recipients" class="form-label">To:</label>
+          <input id="compose-recipients" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="compose-subject" class="form-label">Subject:</label>
+          <input class="form-control" id="compose-subject" placeholder="Subject">
+        </div>
+        <div class="mb-3">
+          <label for="compose-body" class="form-label">Body:</label>
+          <textarea class="form-control" id="compose-body" rows="6" placeholder="Write your message..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark w-100">Send</button>
+      </form>
+    </div>
+
+    <div id="popup-message"></div>
+
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'mail/inbox.js' %}"></script>
+{% endblock %}
