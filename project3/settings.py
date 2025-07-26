@@ -123,7 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 CSRF_COOKIE_SECURE = True
 CSTF_TRUSTED_ORIGINS = [
-    "https://mbox.onrender.com"
+    "https://mbox-z3f9.onrender.com"
 ]
 
 STATIC_URL = '/static/'
