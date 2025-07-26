@@ -1,6 +1,6 @@
-# 📧 Mailora - A Single Page Mail Application
+# 📧 MBox - A Single Page Mail Application
 
-**Mailora** is a dynamic, single-page mail application built using **Django** for the backend and **JavaScript (ES6)** for frontend interactivity. Inspired by Gmail, this project demonstrates how to implement core email functionalities in a full-stack web environment.
+**MBox** is a dynamic, single-page mail application built using **Django** for the backend and **JavaScript (ES6)** for frontend interactivity. Inspired by Gmail, this project demonstrates how to implement core email functionalities in a full-stack web environment.
 
 ---
 
